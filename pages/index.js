@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     setWidth(span.current.offsetWidth + 10);
-  }, [search]);
+  }, [search, span.current]);
 
   function submit() {
     // submit email to db
