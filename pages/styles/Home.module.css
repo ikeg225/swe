@@ -185,3 +185,62 @@
     font-size: 15px;
     margin: 10px;
 }
+
+.sort input {
+    display: none;
+}
+
+.sortOptions {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.optionsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+.sortOptions label {
+    display: inline-block;
+    cursor: pointer;
+}  
+
+.sortOptions label span {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sortOptions label span:before,
+.sortOptions label span:after {
+    content: '';
+}
+
+.sortOptions label span:before {
+    border: 3px solid #CE9178;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sortOptions label span:after {
+    background: #CE9178;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 10.5px;
+    left: 6px;
+    transition: 300ms;
+    opacity: 0;
+}
+
+.sortOptions label input:checked+span:after {
+    opacity: 1;
+}

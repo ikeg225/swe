@@ -10,6 +10,7 @@ import controls from '../images/controls.png'
 export default function Home() {
 
   const [email, setEmail] = useState("")
+  const [sortValue, setSort] = useState("company")
   const [search, setSearch] = useState("type here...")
   const [width, setWidth] = useState(0);
   const span = useRef();
@@ -90,14 +91,23 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.codeText}>
-            <p><span className={styles.lineNumber}>0</span> <span className={styles.import}>import</span> <span className={styles.re}>re</span></p>
-            <p><span className={styles.lineNumber}>1</span> re.search(<span id="hide" ref={span}>{search}</span><input 
+            <p><span className={styles.lineNumber}>1</span> <span className={styles.import}>import</span> <span className={styles.re}>re</span></p>
+            <p><span className={styles.lineNumber}>2</span> re.search(<span id="hide" ref={span}>{search}</span><input 
                 className={styles.fieldSearch}
                 type="text" 
                 style={{ width }}
                 onChange={evt => evt.target.value.length > 0 ? setSearch(evt.target.value) : setSearch("type here...")} 
                 placeholder="type here..."
               />, database)</p>
+            <p><span className={styles.lineNumber}>3</span> database.sort(</p>
+            <p className={styles.optionsRow}><span className={styles.lineNumber}>4</span> <span className={styles.sortOptions}>{
+            ["company", "pay/hour", "location", "position"].map(sort => (
+                <label key={sort} className={styles.sort} onClick={() => setSort(sort)}>
+                    <input type="radio" name="radio" checked={sort === sortValue} readOnly/> 
+                    <span>{sort}</span>
+                </label>
+              ))}</span></p>
+            <p><span className={styles.lineNumber}>5</span> )</p>
           </div>
         </div>
       </main>
