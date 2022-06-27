@@ -83,7 +83,7 @@
 }
 
 .options {
-    color: #2143dc;
+    color: #4CD5AD;
 }
 
 .points {
@@ -113,4 +113,75 @@
 .divider {
     background-color: white;
     border: 1px solid white;
+}
+
+.code {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+
+.codeBar {
+    background-color: #595959;
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.codeText {
+    background-color: #2D2D2D;
+    width: 100%;
+    font-family: 'Menlo-Regular';
+    font-size: 30px;
+    color: white;
+    padding: 10px 30px;
+}
+
+.fieldSearch {
+    background-color: transparent;
+    border: none;
+    font-family: 'Menlo-Regular';
+    font-size: 30px;
+    color: #CE9178;
+}
+
+.fieldSearch::placeholder {
+    color: #CE9178;
+    opacity: 1;
+}
+
+.lineNumber {
+    color: #858585;
+    font-size: 22px;
+}
+
+.import {
+    color: #C083BB;
+}
+
+.re {
+    color: #4CC0A9;
+}
+
+.emphasis {
+    font-family: 'Helvetica-Oblique';
+}
+
+.tab {
+    background-color: #2D2D2D;
+    height: 100%;
+}
+
+.tab p {
+    color: #969696;
+    font-family: 'Helvetica-Oblique';
+    font-size: 15px;
+    margin: 10px;
 }

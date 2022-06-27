@@ -1,14 +1,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from './styles/Home.module.css'
 import Header from '../components/Header'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Typed from "react-typed"
 import bullet from '../images/greenstar.png'
+import controls from '../images/controls.png'
+
+data = {
+  "Google": {
+  }
+}
 
 export default function Home() {
 
   const [email, setEmail] = useState("")
+  const [search, setSearch] = useState("type here...")
+  const [width, setWidth] = useState(0);
+  const span = useRef();
+
+  useEffect(() => {
+    setWidth(span.current.offsetWidth + 10);
+  }, [search]);
 
   function submit() {
     // submit email to db
@@ -35,7 +48,7 @@ export default function Home() {
                 backSpeed={50}
                 backDelay={2000}
                 loop
-              /></span><br/>internship postings fast and stay up to date with the latest openings.
+              /></span><br/>internship postings <span className={styles.emphasis}>fast</span> and stay up to date with the latest openings.
             </p>
             <form className={styles.emailSubmit} onSubmit={submit()}>
               <input 
@@ -55,7 +68,7 @@ export default function Home() {
           <hr className={styles.divider} />
           <div className={styles.points}>
             {[[5, "Fields"], [22, "Locations"], [142, "Companies"], [478, "Positions"]].map(points => (
-              <div className={styles.pointsDetails}>
+              <div key={points[1]} className={styles.pointsDetails}>
                 <Image 
                   src={bullet}
                   alt=""
@@ -66,6 +79,30 @@ export default function Home() {
                 <p>{points[0]}<br/><span className={styles.pointsDesc}>{points[1]}</span></p>
               </div>
             ))}
+          </div>
+        </div>
+        <div className={styles.code}>
+          <div className={styles.codeBar}>
+            <Image 
+              src={controls}
+              alt=""
+              width={84}
+              height={20}
+              layout='fixed'
+            />
+            <div className={styles.tab}>
+              <p>sweintern.py</p>
+            </div>
+          </div>
+          <div className={styles.codeText}>
+            <p><span className={styles.lineNumber}>0</span> <span className={styles.import}>import</span> <span className={styles.re}>re</span></p>
+            <p><span className={styles.lineNumber}>1</span> re.search(<span id="hide" ref={span}>{search}</span><input 
+                className={styles.fieldSearch}
+                type="text" 
+                style={{ width }}
+                onChange={evt => evt.target.value.length > 0 ? setSearch(evt.target.value) : setSearch("type here...")} 
+                placeholder="type here..."
+              />, database)</p>
           </div>
         </div>
       </main>

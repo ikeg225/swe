@@ -21,6 +21,13 @@ a {
   box-sizing: border-box;
 }
 
+#hide {
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+  white-space: pre;
+}
+
 @font-face {
   font-family: 'Gotham-Black';
   src: url('../fonts/GothamSSm-Black.otf');
