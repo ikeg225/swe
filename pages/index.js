@@ -7,11 +7,6 @@ import Typed from "react-typed"
 import bullet from '../images/greenstar.png'
 import controls from '../images/controls.png'
 
-data = {
-  "Google": {
-  }
-}
-
 export default function Home() {
 
   const [email, setEmail] = useState("")
