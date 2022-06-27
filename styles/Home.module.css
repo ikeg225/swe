@@ -1,0 +1,116 @@
+.front {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+
+.headline {
+    color: white;
+    font-family: 'Gotham-Black';
+    font-size: 75px;
+    margin: 0;
+}
+
+.subheadline {
+    font-family: 'Helvetica-Regular';
+    color: #C1C0C0;
+    font-size: 30px;
+    max-width: 475px;
+}
+
+.left {
+    max-width: 670px;
+}
+
+.emailSubmit {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.field {
+    font-family: 'Helvetica-Regular';
+    color: #C1C0C0;
+    font-size: 22px;
+    width: 70%;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.submit {
+    width: 30%;
+    background-color: #4CD5AD;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Helvetica-Regular';
+    color: black;
+    font-size: 22px;
+}
+
+.radialGreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 500px;
+    background-image: radial-gradient(
+        ellipse at top left,
+        rgb(76, 213, 173, 0.6),
+        rgb(76, 213, 173, 0) 50%
+    );
+    z-index: 0;
+    animation: fade 3s infinite;
+}  
+
+.radialBlue {
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 1500px;
+    background-image: radial-gradient(
+        ellipse at right,
+        rgb(12, 43, 186, 0.8),
+        rgb(12, 43, 186, 0) 50%
+    );
+    z-index: 0;
+    animation: fade 3s infinite;
+}  
+
+@keyframes fade {
+    0%,100% { opacity: 1 }
+    50% { opacity: 0.6 }
+}
+
+.options {
+    color: #2143dc;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.pointsDetails {
+    color: white;
+    font-family: 'Menlo-Regular';
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    gap: 10px;
+}
+
+.pointsDetails p {
+    margin: 0;
+}
+
+.pointsDesc {
+    color: #C1C0C0;
+    font-size: 18px;
+}
+
+.divider {
+    background-color: white;
+    border: 1px solid white;
+}

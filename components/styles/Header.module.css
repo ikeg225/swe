@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-family: 'Gotham-Black';
+}
+
+.left {
+    padding-right: 75px;
+    font-size: 30px;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 18px;
+}
