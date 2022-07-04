@@ -88,3 +88,29 @@
     background-color: #CE9178;
     color: #191A1D;
 }
+
+.which {
+    font-family: 'Helvetica-Bold';
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.location {
+    color: #A0EEEE;
+    background-color: #A2EEEF2E;
+    border: #A0EEEE 1px solid;
+}
+
+.payhour {
+    color: #D5B02A;
+    background-color: #D6B32E2E;
+    border: #D5B02A 1px solid;
+}
+
+.time {
+    color: #EB9CA6;
+    background-color: #D73A4A2E;
+    border: #EB9CA6 1px solid;
+}

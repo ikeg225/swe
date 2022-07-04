@@ -5,11 +5,11 @@ import { connectInfiniteHits } from 'react-instantsearch-dom';
 
 const InfiniteHits = ({ hits, hasMore, refineNext }) => (
     <div className={styles.results}>
-        <ul className={styles.lists}>
-            {hits.map((hit, index) => (
-                <li key={index} className={styles.listing}>
-                    <a target="_blank" rel="noopener noreferrer" href={hit.postURL} key={hit.name}>
-                        <div className={styles.posting} key={hit.name}>
+        <div className={styles.lists}>
+            {hits.map((hit) => (
+                <div key={hit.id} className={styles.listing}>
+                    <a target="_blank" rel="noopener noreferrer" href={hit.postURL} >
+                        <div className={styles.posting} >
                             <div className={styles.header}>
                                 <div className={styles.company}>
                                     {hit.foundLogo && <img src={`./images/logos/${hit.companyShort}.png`} alt={hit.companyShort} className={styles.logo} />}
@@ -23,12 +23,18 @@ const InfiniteHits = ({ hits, hasMore, refineNext }) => (
                                 {hit.name}
                             </div>
                             <div className={styles.tag}>
-                                {hit.locations.map(location => (
-                                    <Tag value={location} which="location" />
+                                {hit.locations.map((location, index) => (
+                                    location !== '' && <div key={location + hit.id + index} className={`${styles.which} ${styles.location}`} >
+                                        {location}
+                                    </div>
                                 ))}
-                                <Tag value={hit.payhour} which="payhour" />
-                                {hit.timeframe.split(",").map(time => (
-                                    <Tag value={time} which="time" />
+                                {hit.payhour !== 0 && <div key={hit.payhour + hit.id} className={`${styles.which} ${styles.payhour}`} >
+                                    {`$${hit.payhour}/hr`}
+                                </div>}
+                                {hit.timeframe.split(",").map((time, index) => (
+                                    time !== '' && <div key={time + hit.id + index} className={`${styles.which} ${styles.time}`} >
+                                        {time}
+                                    </div>
                                 ))}
                             </div>
                             <div className={styles.content}>
@@ -36,9 +42,9 @@ const InfiniteHits = ({ hits, hasMore, refineNext }) => (
                             </div>
                         </div>
                     </a>
-                </li>
+                </div>
             ))}
-        </ul>
+        </div>
         {hasMore && <div className={styles.buttonwrap}>
             <button className={styles.buttonMore} onClick={refineNext} >
                 Show more
