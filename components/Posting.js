@@ -1,4 +1,3 @@
-import Tag from './Tag'
 import Link from 'next/link'
 import styles from './styles/Posting.module.css'
 import { connectInfiniteHits } from 'react-instantsearch-dom';
