@@ -113,12 +113,7 @@ export default function Home({ postings, companies }) {
             </div>
           </div>
           <p className={styles.openings}>Current Openings:</p>
-          <div className={styles.results}>
-            <InfiniteHits
-              showPrevious={true}
-              hitComponent={Posting}
-            />
-          </div>
+          <Posting />
         </InstantSearch>
       </main>
     </div>
