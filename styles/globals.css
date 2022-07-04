@@ -61,3 +61,9 @@ a {
 .ais-InfiniteHits-loadPrevious.ais-InfiniteHits-loadPrevious--disabled {
   display: none;
 }
+
+@media screen and (max-width: 500px) {
+  .main {
+    padding: 0px 30px;
+  }
+}

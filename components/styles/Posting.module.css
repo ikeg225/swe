@@ -114,3 +114,25 @@
     background-color: #D73A4A2E;
     border: #EB9CA6 1px solid;
 }
+
+@media screen and (max-width: 650px) {
+    .lists {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        column-gap: 20px;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .company {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+}

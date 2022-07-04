@@ -10,8 +10,6 @@ export default function Header() {
                 <p>About</p>
                 <p>Contact</p>
                 <p>Advertise</p>
-                <p>Terms &amp; Conditions</p>
-                <p>Privacy Policy</p>
             </div>
         </div>
     )

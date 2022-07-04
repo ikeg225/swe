@@ -17,3 +17,9 @@
     gap: 30px;
     font-size: 18px;
 }
+
+@media screen and (max-width: 500px) {
+    .right {
+        display: none;
+    }
+}

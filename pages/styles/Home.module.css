@@ -45,6 +45,7 @@
     width: 70%;
     padding: 15px 20px;
     border-radius: 15px;
+    border: none;
 }
 
 .submit {
@@ -160,6 +161,7 @@
     font-family: 'Menlo-Regular';
     font-size: 30px;
     color: #CE9178;
+    width: 220px;
 }
 
 .fieldSearch::placeholder {
@@ -206,4 +208,209 @@
     font-family: 'Menlo-Regular';
     font-size: 30px;
     color: #CE9178;
+}
+
+@media screen and (max-width: 1024px) {
+    .front {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .points {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 50px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .code {
+        margin-top: 150px;
+    }
+}  
+
+@media screen and (max-width: 800px) {
+    .radialGreen {
+        width: 100%;
+    }  
+
+    .codeText {
+        font-size: 24px;
+    }
+
+    .fieldSearch {
+        font-size: 24px;
+        width: 180px;
+    }
+
+    .sort > div > select {
+        font-size: 24px;
+    }
+
+    .lineNumber {
+        font-size: 18px;
+    }
+
+    .codeBar span {
+        width: 63px !important;
+        height: 15px !important;
+    }
+
+    .tab p {
+        font-size: 12px;
+    }
+}  
+
+@media screen and (max-width: 775px) {
+    .headline {
+        font-size: 60px;
+    }
+
+    .Fields {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .codeText {
+        font-size: 20px;
+    }
+
+    .fieldSearch {
+        font-size: 20px;
+        width: 145px;
+    }
+
+    .sort > div > select {
+        font-size: 20px;
+    }
+
+    .lineNumber {
+        color: #858585;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .headline {
+        font-size: 50px;
+    }
+
+    .subheadline {
+        font-size: 24px;
+    }
+
+    .pointsDetails {
+        font-size: 24px;
+    }
+        
+    .pointsDesc {
+        font-size: 14px;
+    }
+
+    .field {
+        font-size: 18px;
+    }
+
+    .submit {
+        font-size: 18px;
+    }
+
+    .openings {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .codeText {
+        font-size: 16px;
+    }
+
+    .fieldSearch {
+        font-size: 16px;
+        width: 120px;
+    }
+
+    .sort > div > select {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .headline {
+        font-size: 40px;
+    }
+
+    .LastUpdated {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .emailSubmit {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .field {
+        width: 100%;
+    }
+    
+    .submit {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .front {
+        padding-top: 20px;
+    }
+
+    .headline {
+        font-size: 35px;
+    }
+
+    .subheadline {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .codeBar {
+        padding-left: 20px;
+    }
+
+    .codeText {
+        padding: 10px 20px;
+        padding-bottom: 20px;
+    }
+
+    .code {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .company {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .points {
+        gap: 20px;
+    }
+
+    .pointsDetails span {
+        width: 25px !important;
+        height: 25px !important;
+    }
 }

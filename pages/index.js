@@ -23,7 +23,6 @@ export default function Home({ postings, companies }) {
     <input
       className={styles.fieldSearch}
       type="text" 
-      style={{ width: 220 }}
       placeholder="type here..."
       value={currentRefinement}
       onChange={event => refine(event.currentTarget.value)}
@@ -73,7 +72,7 @@ export default function Home({ postings, companies }) {
           <hr className={styles.divider} />
           <div className={styles.points}>
             {[[12, "Fields"], [companies["num_documents"], "Companies"], [postings["num_documents"], "Positions"], [date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), "Last Updated"]].map(points => (
-              <div key={points[1]} className={styles.pointsDetails}>
+              <div key={points[1]} className={`${styles.pointsDetails} ${points[1] === "Last Updated" ? styles.LastUpdated : styles[points[1]]}`}>
                 <Image 
                   src={bullet}
                   alt=""
