@@ -125,9 +125,8 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
     apiKey: "7yLgCsumHRkfAOH92I1kiE1mhF4dJeKI",
     nodes: [
       {
-        host: "209.50.54.104",
-        port: "8108",
-        protocol: "http",
+        host: "api.sweintern.com",
+        protocol: "https",
       },
     ],
     cacheSearchResultsForSeconds: 2 * 60,
