@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Posting({ hit }) {
     return (
-        //<a target="_blank" rel="noopener noreferrer" href={hit.postURL}>
+        <a target="_blank" rel="noopener noreferrer" href={hit.postURL}>
             <div className={styles.posting} key={hit.name}>
                 <div className={styles.header}>
                     <div className={styles.company}>
@@ -31,6 +31,6 @@ export default function Posting({ hit }) {
                 The following posting is a pipeline requisition, meant to accumulate candidates for Software Engineer in Houston and/or Fort Collins. Qualified applicants will be contacted i...
                 </div>
             </div>
-        //</a>
+        </a>
     )
 }

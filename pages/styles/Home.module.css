@@ -213,7 +213,7 @@
     flex-basis: 33.333333%;
 }  
 
-.results > div > ul > li > div {
+.results > div > ul > li > a {
     height: 100%;
 }
 
