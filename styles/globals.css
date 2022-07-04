@@ -34,6 +34,11 @@ a {
 }
 
 @font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/GothamSSm-Medium.otf');
+}
+
+@font-face {
   font-family: 'Helvetica-Regular';
   src: url('../fonts/Helvetica.ttf');
 }
@@ -51,4 +56,8 @@ a {
 @font-face {
   font-family: 'Menlo-Regular';
   src: url('../fonts/Menlo-Regular.ttf');
+}
+
+.ais-InfiniteHits-loadPrevious.ais-InfiniteHits-loadPrevious--disabled {
+  display: none;
 }

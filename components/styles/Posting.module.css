@@ -1,0 +1,47 @@
+.posting {
+    color: white;
+    background-color: #595959;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo {
+    height: 20px;
+}
+
+.company {
+    font-family: 'Gotham-Black';
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.posted {
+    color: #B4B4B4;
+    font-family: 'Helvetica-Regular';
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name {
+    font-family: 'Gotham-Medium';
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.content {
+    font-family: 'Helvetica-Regular';
+}

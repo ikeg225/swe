@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 100px;
+    max-width: 1250px;
 }
 
 .headline {
@@ -9,6 +10,14 @@
     font-family: 'Gotham-Black';
     font-size: 75px;
     margin: 0;
+}
+
+.openings {
+    color: white;
+    font-family: 'Gotham-Black';
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .subheadline {
@@ -142,6 +151,7 @@
     font-size: 30px;
     color: white;
     padding: 10px 30px;
+    padding-bottom: 30px;
 }
 
 .fieldSearch {
@@ -186,61 +196,57 @@
     margin: 10px;
 }
 
-.sort input {
-    display: none;
+.results {
+    padding-bottom: 50px;
 }
 
-.sortOptions {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    flex-wrap: wrap;
+.results div ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    column-gap: 20px;
+    row-gap: 50px;
 }
 
-.optionsRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 60px;
-}
-
-.sortOptions label {
-    display: inline-block;
-    cursor: pointer;
+.results > div > ul > li {
+    list-style: none;
+    flex-basis: 33.333333%;
 }  
 
-.sortOptions label span {
-    position: relative;
+.results > div > ul > li > div {
+    height: 100%;
+}
+
+.sort > div {
+    display: inline;
+}
+
+.sort > div > select {
+    background-color: transparent;
+    border: none;
+    font-family: 'Menlo-Regular';
+    font-size: 30px;
+    color: #CE9178;
+}
+
+.results > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    gap: 50px;
 }
 
-.sortOptions label span:before,
-.sortOptions label span:after {
-    content: '';
+.results > div > button {
+    background-color: transparent;
+    color: #CE9178;
+    border: 2px solid #CE9178;
+    padding: 10px 20px;
+    font-family: 'Menlo-Regular';
+    border-radius: 10px;
+    cursor: pointer !important;
 }
 
-.sortOptions label span:before {
-    border: 3px solid #CE9178;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.sortOptions label span:after {
-    background: #CE9178;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 10.5px;
-    left: 6px;
-    transition: 300ms;
-    opacity: 0;
-}
-
-.sortOptions label input:checked+span:after {
-    opacity: 1;
+.results > div > button:hover {
+    background-color: #CE9178;
+    color: #191A1D;
 }
